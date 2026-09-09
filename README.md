@@ -6,7 +6,7 @@ Marketplace plugin dùng chung cho Claude Code của studio Skybow.
 
 ```bash
 # 1. Thêm marketplace (đổi URL thành repo GitLab thật sau khi push)
-claude plugin marketplace add https://gitlab.com/<org>/skybow-claude-plugins.git
+claude plugin marketplace add https://github.com/Archer-Skybow/skybow-claude-plugins.git
 
 # 2. Cài plugin
 claude plugin install skybow-csharp-style@skybow-claude-plugins
@@ -15,7 +15,7 @@ claude plugin install skybow-csharp-style@skybow-claude-plugins
 Hoặc trong phiên Claude Code đang chạy:
 
 ```
-/plugin marketplace add https://gitlab.com/<org>/skybow-claude-plugins.git
+/plugin marketplace add https://github.com/Archer-Skybow/skybow-claude-plugins.git
 /plugin install skybow-csharp-style@skybow-claude-plugins
 ```
 
