@@ -4,6 +4,8 @@ Marketplace plugin dùng chung cho Claude Code của studio Skybow.
 
 ## Cài đặt (mỗi máy làm 1 lần)
 
+Cài từ CMD/Powershell hoặc WSL
+
 ```bash
 # 1. Thêm marketplace (đổi URL thành repo GitLab thật sau khi push)
 claude plugin marketplace add https://github.com/Archer-Skybow/skybow-claude-plugins.git
