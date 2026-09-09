@@ -106,7 +106,7 @@ dotnet_naming_rule.interfaces_have_i_prefix.severity = warning
 
 ##### Rider / ReSharper: dòng trắng quanh guard clause #####
 # "Enforce if any part requires braces": if/else chỉ bỏ ngoặc khi MỌI nhánh đều 1 dòng
-resharper_braces_for_ifelse = required_for_multiline_statement
+resharper_braces_for_ifelse = not_required_for_both
 resharper_braces_for_foreach = required
 resharper_braces_for_for = required
 resharper_braces_for_while = required
