@@ -1,0 +1,24 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "skybow-claude-plugins",
+  "description": "Claude Code plugins dùng chung của studio Skybow",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Skybow"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "skybow-csharp-style",
+      "displayName": "Skybow C# / Unity Code Style",
+      "source": "skybow-csharp-style",
+      "description": "Coding convention + code format C# cho các dự án Unity của Skybow (rút ra từ Roadside _GameCore/Services).",
+      "version": "1.0.0",
+      "author": { "name": "Skybow" },
+      "keywords": ["csharp", "unity", "code-style", "convention", "editorconfig"],
+      "category": "code-quality"
+    }
+  ]
+}

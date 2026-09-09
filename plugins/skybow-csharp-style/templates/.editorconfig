@@ -1,0 +1,117 @@
+# Skybow C# / Unity code style
+# Nguồn: plugin skybow-csharp-style. Sửa ở plugin rồi copy lại, đừng sửa lệch từng dự án.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = crlf
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = false
+
+[*.{json,yml,yaml,xml,md}]
+indent_size = 2
+
+[*.cs]
+
+##### using #####
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+csharp_using_directive_placement = outside_namespace:warning
+dotnet_diagnostic.IDE0005.severity = warning        # using thừa
+
+##### var #####
+csharp_style_var_for_built_in_types = true:suggestion
+csharp_style_var_when_type_is_apparent = true:warning
+csharp_style_var_elsewhere = true:suggestion
+
+##### brace: Allman #####
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+
+# Guard clause: if thân 1 câu lệnh thì KHÔNG braces, nhưng phải xuống dòng
+csharp_prefer_braces = when_multiline:suggestion
+csharp_preserve_single_line_statements = false
+csharp_preserve_single_line_blocks = true
+
+##### indent #####
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_braces = false
+csharp_indent_block_contents = true
+
+##### spacing #####
+csharp_space_after_cast = false
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_before_colon_in_inheritance_clause = true
+csharp_space_after_colon_in_inheritance_clause = true
+csharp_space_around_binary_operators = before_and_after
+
+##### expression-bodied #####
+csharp_style_expression_bodied_properties = true:suggestion
+csharp_style_expression_bodied_accessors = true:suggestion
+csharp_style_expression_bodied_methods = false:suggestion
+csharp_style_expression_bodied_constructors = false:warning
+
+##### C# hiện đại #####
+csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion   # = new()
+csharp_style_inlined_variable_declaration = true:warning                        # out var x
+csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
+csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+dotnet_style_null_propagation = true:suggestion
+dotnet_style_coalesce_expression = true:suggestion
+dotnet_style_object_initializer = true:suggestion
+dotnet_style_readonly_field = true:suggestion
+
+##### ĐẶT TÊN #####
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+dotnet_naming_style.camel_case.capitalization = camel_case
+dotnet_naming_style.i_prefix.capitalization = pascal_case
+dotnet_naming_style.i_prefix.required_prefix = I
+
+# private/protected field -> camelCase, KHÔNG prefix _
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private, protected, private_protected, protected_internal
+dotnet_naming_rule.private_fields_are_camel_case.symbols = private_fields
+dotnet_naming_rule.private_fields_are_camel_case.style = camel_case
+dotnet_naming_rule.private_fields_are_camel_case.severity = warning
+
+# public/internal member -> PascalCase
+dotnet_naming_symbols.public_members.applicable_kinds = property, method, event, field
+dotnet_naming_symbols.public_members.applicable_accessibilities = public, internal
+dotnet_naming_rule.public_members_are_pascal_case.symbols = public_members
+dotnet_naming_rule.public_members_are_pascal_case.style = pascal_case
+dotnet_naming_rule.public_members_are_pascal_case.severity = warning
+
+# type -> PascalCase
+dotnet_naming_symbols.types.applicable_kinds = class, struct, enum, delegate
+dotnet_naming_symbols.types.applicable_accessibilities = *
+dotnet_naming_rule.types_are_pascal_case.symbols = types
+dotnet_naming_rule.types_are_pascal_case.style = pascal_case
+dotnet_naming_rule.types_are_pascal_case.severity = warning
+
+# interface -> IPascalCase
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+dotnet_naming_rule.interfaces_have_i_prefix.symbols = interfaces
+dotnet_naming_rule.interfaces_have_i_prefix.style = i_prefix
+dotnet_naming_rule.interfaces_have_i_prefix.severity = warning
+
+##### Rider / ReSharper: dòng trắng quanh guard clause #####
+resharper_braces_for_ifelse = required_for_multiline
+resharper_braces_for_foreach = required
+resharper_braces_for_for = required
+resharper_braces_for_while = required
+resharper_place_simple_embedded_statement_on_same_line = false
+resharper_blank_lines_before_control_transfer_statements = 1
+resharper_blank_lines_after_block_statements = 1
+resharper_blank_lines_around_single_line_invocable = 1
+resharper_keep_existing_declaration_block_arrangement = false
+resharper_csharp_max_line_length = 160

@@ -1,0 +1,12 @@
+{
+  "name": "skybow-csharp-style",
+  "displayName": "Skybow C# / Unity Code Style",
+  "version": "1.0.0",
+  "description": "Coding convention + code format C# cho các dự án Unity của Skybow. Gồm skill convention (2 tầng: generic C# và ServiceLocator stack), .editorconfig chuẩn, và hook nhắc convention đầu session.",
+  "author": {
+    "name": "Skybow"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["csharp", "unity", "code-style", "convention", "editorconfig"],
+  "hooks": "./hooks/hooks.json"
+}
