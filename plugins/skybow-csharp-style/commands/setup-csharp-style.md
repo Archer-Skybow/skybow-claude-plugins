@@ -13,6 +13,6 @@ Cài code style Skybow vào dự án đang mở.
    - Không → báo chỉ áp tầng A (generic C#).
 4. Nếu dự án đã có code C#: quét nhanh 3 điểm hay lệch nhất rồi **chỉ báo cáo, không tự sửa**:
    - private field có prefix `_`
-   - `namespace` (convention Skybow là global namespace)
+   - `namespace` dùng không nhất quán trong cùng module, hoặc file-scoped `namespace X;` (Skybow dùng namespace block)
    - `if` thân 1 câu lệnh nhưng viết cùng dòng với `if`
 5. Báo cáo bằng tiếng Việt: đã copy gì, tầng nào áp dụng, các chỗ lệch tìm được. **Không sửa code trừ khi user yêu cầu.**
