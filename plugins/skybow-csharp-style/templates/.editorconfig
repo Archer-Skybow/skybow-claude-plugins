@@ -124,4 +124,11 @@ resharper_keep_existing_attribute_arrangement = true
 # không tự chèn dòng trắng giữa các field; dòng trắng trước [Header] là do mình gõ và được giữ
 resharper_blank_lines_around_field = 0
 resharper_blank_lines_around_single_line_field = 0
-resharper_keep_blank_lines_in_declarations = 1
+# = 2 để không cắt bớt 2 dòng trắng quanh #region bên dưới
+resharper_keep_blank_lines_in_declarations = 2
+resharper_keep_blank_lines_in_code = 2
+
+##### Rider / ReSharper: #region #####
+# 2 dòng trắng trước #region và sau #endregion
+resharper_blank_lines_around_region = 2
+resharper_blank_lines_inside_region = 1

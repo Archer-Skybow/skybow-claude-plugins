@@ -22,7 +22,7 @@ Khi sửa file cũ: theo style của **chính file đó**, đừng reformat hàn
 - **`namespace` — dùng được khi cần.** Mặc định code Skybow ở global namespace, nhưng khi cần tách module / tránh trùng tên (library dùng chung, package, tool editor) thì cứ dùng `namespace`. Đã dùng thì **nhất quán trong cả module**, không nửa trong nửa ngoài. Style: `namespace` block Allman (không dùng file-scoped `namespace X;`), `using` đặt **ngoài** namespace.
 - `using` gom ở đầu file, thứ tự: `System.*` → third-party → `UnityEngine*`. Không để `using` thừa.
 - 1 file = 1 class chính, **tên file = tên class**. Ngoại lệ: file gom nhiều model nhỏ cùng chủ đề (`SkillModels.cs`).
-- File dài chia bằng `#region TÊN VIẾT HOA` … `#endregion` (`#region PRIVATE METHODS`, `#region UNITY LIFECYCLE`), có dòng trắng trước và sau. File < ~100 dòng thì không cần region.
+- File dài chia bằng `#region TÊN VIẾT HOA` … `#endregion` (`#region PRIVATE METHODS`, `#region UNITY LIFECYCLE`), **2 dòng trắng trước `#region` và 2 dòng trắng sau `#endregion`**. File < ~100 dòng thì không cần region.
 
 ## A2. Đặt tên
 
